@@ -1062,9 +1062,12 @@ namespace LumiSoft.Net.FTP.Server
 			}
             if(string.IsNullOrEmpty(argsText)){
                 WriteLine("501 Invalid path value.");
+
+                return;
             }
 
-			/*
+            WriteLine("250 Okay.");
+            /*
 				This command specifies the old pathname of the file which is
 				to be renamed.  This command must be immediately followed by
 				a "rename to" command specifying the new file pathname.
